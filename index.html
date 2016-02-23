@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>model 弹框</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- 避免IE使用兼容模式，IE 运行最新的渲染模式,用 Chrome 框架的页面用webkit 内核-->
+	<meta name="renderer" content="webkit">
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<!-- 初始化移动浏览显示,移动端必须使用 -->
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="basestyle/stylesheets/screen.css">
+	<!-- main css -->
+
+	<!-- 无关紧要的样式 -->
+	<style type="text/css">
+		.content{
+			width:100%;
+			padding:100px;
+			text-align:center;
+		}
+		.content button{
+			margin:10px;
+		}
+	</style>
+	<!-- 无关紧要的样式 -->
+
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><!-- 引入jquery版本库 -->
+</head>
+<body>
+	<div class="content">
+		<button class="btn_alert">弹框 alert</button>
+		<button class="btn_confirm">弹框 confirm</button>
+	</div>
+
+
+	<script type="text/javascript" src="js/model.js"></script><!-- 引入model插件 -->
+	<script type="text/javascript">
+		$(function(){
+			$(document).on('click','.btn_alert',function(){
+				$.alert('这是模拟alert弹框！') //alert
+			})
+
+			$(document).on('click','.btn_confirm',function(){
+
+				//confirm
+				$.confirm(
+					'你是妹子吗？',
+					function(){
+						$.alert('yes,我是妹子！')
+					},
+					function(){
+						$.alert('no,我是男的！')
+					}
+				)
+			})
+		})
+	</script>
+</body>
+</html>
