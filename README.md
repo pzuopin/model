@@ -9,12 +9,12 @@ jquery 模拟弹出层
 
 ##### 调用方法：
 	$.alert(text, [title, callbackOk])
-   	text —— string. Alert文本
+   		text —— string. Alert文本
  		title —— string. options. Alert modal 标题
  		callbackOk —— function. options. 在Alert modal下，当用户点击“Ok”按钮时，回调函数将被执行
  
  	$.confirm(text, [title, callbackOk, callbackCancel])
-   	text —— string. Alert文本
+   		text —— string. Alert文本
  		title —— string. options. Alert modal 标题
  		callbackOk —— function. options. 在Alert modal下，当用户点击“ok”按钮时，回调函数将被执行
  		callbackCancel —— function. options. 在Alert modal下，当用户点击“cancel”按钮时，回调函数将被执行
